@@ -223,7 +223,7 @@ class SAML {
     samlMessage.Signature = signer.sign(keyToPEM(this.options.privateKey), "base64");
   }
 
-  private async generateAuthorizeRequestAsync(
+  protected async generateAuthorizeRequestAsync(
     isPassive: boolean,
     isHttpPostBinding: boolean,
     host: string | undefined
